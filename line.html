@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>line</title>
+</head>
+<body>
+	<canvas id="canvas"></canvas>
+	<script>
+		var canvas = document.getElementById('canvas');
+		canvas.width = 1024;
+		canvas.height = 500;
+		canvas.style.margin = '50px 150px';
+		canvas.style.border = '1px solid #ccc';
+		var context = canvas.getContext('2d');
+		context.beginPath();
+		context.moveTo(50,50);
+		context.lineTo(400,400);
+		context.lineTo(50,400);
+		context.lineTo(50,50);
+		context.closePath();
+		context.lineWidth = 5;
+		context.fillStyle = 'rgb(2,100,30)';
+		context.fill();
+		context.beginPath()
+		context.moveTo(100,50)
+		context.lineTo(400,350)
+		context.closePath()
+		context.strokeStyle = '#058';
+		context.stroke()
+		context.beginPath();
+		context.moveTo(400, 50)
+		context.lineTo(1000,50)
+		context.lineTo(1000,450)
+		context.lineTo(400,450)
+		context.lineTo(400,50)
+		context.strokeStyle = '#0f0';
+		context.stroke()
+	</script>
+</body>
+</html>

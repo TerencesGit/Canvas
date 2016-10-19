@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>circle</title>
+</head>
+<body>
+	<canvas id="canvas"></canvas>
+	<script>
+		var canvas = document.getElementById('canvas');
+		canvas.width = 1200;
+		canvas.height = 500;
+		var context = canvas.getContext('2d');
+		context.lineWidth = 5;
+		context.strokeStyle = '#058';
+		context.arc(300,300,200,0,1.5*Math.PI);
+		context.stroke()
+		for(var i = 0;i<10;i++){
+			context.beginPath();
+			context.arc(200 + i*100,180,40,0,2*Math.PI*(i+1)/10)
+			//context.closePath();
+			context.stroke()
+		}
+		context.fillStyle = '#058';
+		for(var i = 0;i<10;i++){
+			context.beginPath();
+			context.arc(200 + i*100,380,40,0,2*Math.PI*(i+1)/10)
+			context.fill()
+		}
+	</script>
+</body>
+</html>

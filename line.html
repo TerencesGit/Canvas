@@ -5,13 +5,11 @@
 	<title>line</title>
 </head>
 <body>
-	<canvas id="canvas"></canvas>
+	<canvas id="canvas" style="display:block;margin:50px auto;border:1px solid #ccc"></canvas>
 	<script>
 		var canvas = document.getElementById('canvas');
 		canvas.width = 1024;
 		canvas.height = 500;
-		canvas.style.margin = '50px 150px';
-		canvas.style.border = '1px solid #ccc';
 		var context = canvas.getContext('2d');
 		context.beginPath();
 		context.moveTo(50,50);

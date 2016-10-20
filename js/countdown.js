@@ -59,6 +59,7 @@ function update(){
 		curShowTimeSeconds = nextShowTimeSeconds;
 	}
 	updateBalls()
+	console.log(balls.length)
 }
 function updateBalls(){
 	for(var i =0;i<balls.length;i++){
@@ -69,6 +70,15 @@ function updateBalls(){
 			balls[i].y = canvasHeight - radius;
 			balls[i].vy = - balls[i].vy*0.7;
 		}
+	}
+	var cnt = 0;
+	for(var i = 0;i<balls.length;i++){
+		if(balls[i].x + radius>0 && balls[i].x-radius<canvasWidth){
+			balls[cnt++] = balls[i]
+		}
+	}
+	while(balls.length>Math.min(300,cnt)){
+		balls.pop()
 	}
 }
 function addBalls(x,y,num){

@@ -3,8 +3,9 @@ var canvasWidth = 1100,
 var radius = 8;
 var margin_top = 60;
 var margin_left = 30;
-var endTime = new Date();
-endTime.setTime(endTime.getTime()+ 3600*1000)
+//var endTime = new Date();
+//倒计时一小时
+//endTime.setTime(endTime.getTime()+ 3600*1000)
 var curShowTimeSeconds = 0;
 var balls = [];
 var colors = ['#06f','#09c','#a6c','#93c','#690','#f80','#f44','#c00','#0c0','#3c3']
@@ -21,8 +22,10 @@ window.onload = function(){
 }
 function getCurrentShowTimeSeconds(){
 	var curTime = new Date();
-	var ret = endTime.getTime() - curTime.getTime();
-	ret = Math.round(ret/1000);
+	//var ret = endTime.getTime() - curTime.getTime();
+	//ret = Math.round(ret/1000);
+	//改为当前时间
+	var ret = curTime.getHours()*3600 + curTime.getMinutes()*60 + curTime.getSeconds();
 	return ret >= 0 ? ret : 0;
 }
 function update(){

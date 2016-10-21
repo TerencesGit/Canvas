@@ -3,7 +3,8 @@ var canvasWidth = 1100,
 var radius = 8;
 var margin_top = 60;
 var margin_left = 30;
-const endTime = new Date(2016,9,24,20,00,00);
+var endTime = new Date();
+endTime.setTime(endTime.getTime()+ 3600*1000)
 var curShowTimeSeconds = 0;
 var balls = [];
 var colors = ['#06f','#09c','#a6c','#93c','#690','#f80','#f44','#c00','#0c0','#3c3']

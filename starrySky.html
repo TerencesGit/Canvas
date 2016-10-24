@@ -5,7 +5,24 @@
     <title>Starry sky</title>
 </head>
 <body style="margin: 0">
-    <canvas id="canvas"></canvas>
-    <script src="js/star.js"></script>
+    <canvas id="canvas" style="display: block;margin: 0 auto; border: 1px solid #ccc"></canvas>
+    <!-- <script src="js/star.js"></script> -->
+    <script>
+    	var canvas = document.getElementById('canvas');
+    	canvas.width =  600;
+    	canvas.height = 600;
+    	var context = canvas.getContext('2d');
+    	context.save()
+    	context.fillStyle = '#f20';
+    	context.translate(100, 100)
+    	context.fillRect(0, 0 ,200 ,200)
+    	context.restore()
+
+    	context.save()
+    	context.fillStyle = '#0f0';
+    	context.translate(300,300)
+    	context.fillRect(0,0,200,200)
+    	context.restore()
+    </script>
 </body>
 </html>

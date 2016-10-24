@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Arrow</title>
+</head>
+<body>
+	<canvas id="canvas" style="display: block;margin: auto;border: 1px solid #ccc"></canvas>
+	<script>
+		var canvas = document.getElementById('canvas');
+		canvas.width = 700;
+		canvas.height = 600;
+		var context = canvas.getContext('2d');
+		context.lineWidth = 5;
+		
+		context.beginPath()
+		context.moveTo(200, 100)
+		context.lineTo(300, 200)
+		context.lineTo(200, 300)
+		context.strokeStyle = '#f20'
+		context.stroke()
+
+		context.beginPath()
+		context.moveTo(300, 100)
+		context.lineTo(400, 200)
+		context.lineTo(300, 300)
+		context.strokeStyle = '#00f'
+		context.stroke()
+
+		context.beginPath();
+		context.moveTo(400, 100)
+		context.lineTo(500, 200)
+		context.lineTo(400, 300)
+		context.strokeStyle = '#0f0'
+		context.stroke()
+
+		context.beginPath()
+		context.moveTo(100, 350)
+		context.lineTo(450, 350)
+		context.lineTo(450, 250)
+		context.lineTo(600, 375)
+		context.lineTo(450, 500)
+		context.lineTo(450, 400)
+		context.lineTo(100, 400)
+		//context.lineTo(100, 350)
+		context.closePath()
+		context.fillStyle = '#f60'
+		context.strokeStyle = '#058'
+		context.fill()
+		context.stroke()
+		// context.fillRect(100,100,100,100)
+		// context.strokeRect(100,200,100,100)
+		// context.rect(200,200,100,100)
+		// context.fill()
+	</script>
+</body>
+</html>

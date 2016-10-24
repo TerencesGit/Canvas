@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>transform</title>
+</head>
+<body style="margin: 0">
+    <canvas id="canvas" style="display: block; margin: 0 auto; border: 1px solid #ccc"></canvas>
+    <script>
+    	var canvas = document.getElementById('canvas');
+    	canvas.width =  1000;
+    	canvas.height = 600;
+    	var context = canvas.getContext('2d');
+    	context.fillStyle = '#f20'
+        context.strokeStyle = '#058'
+        context.lineWidth = 5;
+        context.save()
+        context.transform(1, 0.2, 0.2, 1, 50, 50)
+        context.setTransform(1, 0, 0, 1, 50, 50)
+        context.fillRect(50, 50, 300, 300)
+        context.strokeRect(50, 50, 300, 300)
+        context.restore()
+    </script>
+</body>
+</html>

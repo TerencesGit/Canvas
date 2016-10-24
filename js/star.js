@@ -3,14 +3,17 @@
          canvas.width = document.body.scrollWidth;
          canvas.height = document.body.scrollHeight;
      var context = canvas.getContext('2d');
-         context.fillStyle = '#000'
+     var skyStyle = context.createLinearGradient(0,0,0,canvas.height)
+         skyStyle.addColorStop(0,'#000')
+         skyStyle.addColorStop(1,'#035')
+         context.fillStyle = skyStyle;
          context.fillRect(0, 0, canvas.width, canvas.height)
          // context.lineWidth = 3;
          // context.lineJoin = 'bevel';
      for (var i = 0; i < 100; i++) {
-         var r = Math.random() * 10 + 10;
+         var r = Math.random() * 5 + 5;
          var x = Math.random() * canvas.width;
-         var y = Math.random() * canvas.height;
+         var y = Math.random() * canvas.height * 0.65;
          var rot = Math.random() * 360;
          drawStar(context, r, x, y, rot)
      }

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Pattern</title>
+</head>
+<body>
+	 <canvas id="canvas" style="display: block; margin: 50px auto; border: 1px solid #ccc"></canvas>
+    <script src="js/drawstar.js"></script>
+    <script src="js/createcanvas.js"></script>
+    <script>
+    	var canvas = document.getElementById('canvas');
+    	canvas.width =  800;
+    	canvas.height = 600;
+    	var context = canvas.getContext('2d');
+    	var image = new Image();
+        //image.src = 'images/pattern.gif';
+       //
+            var pattern = context.createPattern(createCanvas(),'repeat')
+            context.fillStyle = pattern;
+            context.fillRect(0,0,800,600)
+        //}
+    </script>	
+</body>
+</html>

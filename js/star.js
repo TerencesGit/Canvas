@@ -3,9 +3,14 @@
          canvas.width = document.body.scrollWidth;
          canvas.height = document.body.scrollHeight;
      var context = canvas.getContext('2d');
-     var skyStyle = context.createLinearGradient(0,0,0,canvas.height)
-         skyStyle.addColorStop(0,'#000')
-         skyStyle.addColorStop(1,'#035')
+     //线性渐变
+     //var skyStyle = context.createLinearGradient(0,0,0,canvas.height)
+     //径向渐变
+     var skyStyle = context.createRadialGradient(
+        canvas.width/2, canvas.height, 0,
+        canvas.width/2, canvas.height, canvas.height)
+         skyStyle.addColorStop(0,'#035')
+         skyStyle.addColorStop(1,'#000')
          context.fillStyle = skyStyle;
          context.fillRect(0, 0, canvas.width, canvas.height)
          // context.lineWidth = 3;

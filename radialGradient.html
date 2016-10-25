@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>RadialGradient</title>
+</head>
+<body>
+	 <canvas id="canvas" style="display: block; margin: 50px auto; border: 1px solid #ccc"></canvas>
+    <script>
+    	var canvas = document.getElementById('canvas');
+    	canvas.width =  800;
+    	canvas.height = 600;
+    	var context = canvas.getContext('2d');
+    	var radialGradient = context.createRadialGradient(400,300,0,400,300,400)
+    	radialGradient.addColorStop(0,'#f00')
+    	radialGradient.addColorStop(0.25,'#ff0')
+    	radialGradient.addColorStop(0.5,'#0f0')
+    	radialGradient.addColorStop(0.75,'#00f')
+    	radialGradient.addColorStop(1,'#60f')
+    	context.fillStyle = radialGradient;
+    	context.fillRect(0,0,800,600)
+    </script>	
+</body>
+</html>

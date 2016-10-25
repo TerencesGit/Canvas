@@ -6,31 +6,19 @@
 </head>
 <body>
     <canvas id="canvas" style="display: block;margin: auto;border: 1px solid #ccc"></canvas>
+    <script src="js/star.js"></script>
     <script>
-    var canvas = document.getElementById('canvas');
-    canvas.width = 800;
-    canvas.height = 600;
-    var context = canvas.getContext('2d');
-    context.lineWidth = 5;
-    // miter 尖角(默认) 、bevel 斜接 、round 圆角
-    context.lineJoin = 'miter';
-    //默认 10 
-    context.miterLimit = 20;
-    context.strokeStyle = '#058'
-    drawStar(context,200,20,400,300,90)
-    function drawStar(context, R, r, x, y,rote) {
-        context.beginPath()
-        for (var i = 0; i < 5; i++) {
-            context.lineTo(
-                Math.cos((18 + i * 72 - rote) / 180 * Math.PI) * R + x, 
-                -Math.sin((18 + i * 72 - rote) / 180 * Math.PI) * R + y)
-            context.lineTo(
-                Math.cos((54 + i * 72 - rote) / 180 * Math.PI) * r + x, 
-                -Math.sin((54 + i * 72 - rote) / 180 * Math.PI) * r + y)
-        }
-        context.closePath()
-        context.stroke()
-    }
+        var canvas = document.getElementById('canvas');
+        canvas.width = 800;
+        canvas.height = 600;
+        var context = canvas.getContext('2d');
+        context.lineWidth = 5;
+        // miter 尖角(默认) 、bevel 斜接 、round 圆角
+        context.lineJoin = 'miter';
+        //默认 10 
+        context.miterLimit = 20;
+        context.strokeStyle = '#058'
+        drawStar(context, 200, 80, 400, 300, 0)
     </script>
 </body>
 

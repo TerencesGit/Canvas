@@ -1,8 +1,8 @@
 function createCanvas(){
 	var canvas = document.createElement('canvas');
-	canvas.widht = 100;
-	canvas.height = 100;
+	canvas.width = 80;
+	canvas.height = 60;
 	var cxt = canvas.getContext('2d');
-	drawStar(cxt, 50, 50, 50, 0);
+	drawStar(cxt, 30, 30, 30, 0);
 	return canvas;
 }
